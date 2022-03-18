@@ -1,12 +1,19 @@
 <?php
 
-spl_autoload_register(function ($class_name) {
+/*function __autoload($nomeClasse){
+    
+    $filename = $nomeClasse.".php";
+    require_once($filename);
 
+}*/
 
-    $filename = "class" . DIRECTORY_SEPARATOR . $class_name . ".php";
+spl_autoload_register(function($nomeClasse){
 
-    if (file_exists(($filename))) {
+    $filename = $nomeClasse.".php";
+
+    if(file_exists($filename)){
         require_once($filename);
     }
 });
+
 ?>
