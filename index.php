@@ -33,10 +33,17 @@ $aluno->insert();
 echo $aluno;
 */
 
-$usuario = new Usuario();
+//NOTE Alterar um usuário
+/*$usuario = new Usuario();
 $usuario->LoadByID(1);
 $usuario->update("Aluno", "Hcode");
+echo $usuario;
+*/
 
+$usuario = new Usuario();
+$usuario->LoadByID(14);
+
+$usuario->delete();
 echo $usuario;
 
 
